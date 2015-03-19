@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Examples</title>
+    <meta charset="UTF-8">
+
+    <script src="examples.js"></script>
+</head>
+<body>
+
+<template id="data-repeat">
+    <p>Test HTML templates</p>
+    <content></content>
+</template>
+
+<data-repeat bind="users">
+    Content
+</data-repeat>
+
+<data-repeat bind="tracks">
+    Content
+</data-repeat>
+
+<script>
+    var dataRepeat = document.registerElement('data-repeat', {
+        prototype: Object.create(HTMLElement.prototype, {
+            createdCallback: {
+                value: function() {
+                    var t = document.querySelector('#data-repeat');
+                    var clone = document.importNode(t.content, true);
+                    this.createShadowRoot().appendChild(clone);
+                }
+            }
+        })
+    });
+
+    var observer = Object.observe({ }, function() {
+
+    });
+
+    Object.getNotifier({ }).notify()
+
+    console.dir(document.querySelector('data-repeat'));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="DefinitelyTyped" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/DefinitelyTyped" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/DefinitelyTyped" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
