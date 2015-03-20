@@ -23,7 +23,16 @@ interface NotifierNotify {
 }
 
 interface Object {
+    observe(beingObserved: any, callback: (update: any, changes?: any) => any) : void;
 
+    getNotifier(beingObserved: any): NotifierNotify
+
+    deliverChangeRecords(callback: Function): void
+
+    unobserve(observer: Function, callback?: Function): void
+}
+
+interface Array {
     observe(beingObserved: any, callback: (update: any, changes?: any) => any) : void;
 
     getNotifier(beingObserved: any): NotifierNotify

@@ -1,47 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html data-app="app">
 <head>
     <title>Examples</title>
     <meta charset="UTF-8">
 
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+
+    <link rel="import" href="data-model.html">
     <script src="examples.js"></script>
 </head>
 <body>
 
-<template id="data-repeat">
-    <p>Test HTML templates</p>
-    <content></content>
-</template>
+    <h1>Hello</h1>
 
-<data-repeat bind="users">
-    Content
-</data-repeat>
+    <script>
+        var link = document.querySelector('link[rel=import]');
+        var content = link.import.querySelector('#data-model');
 
-<data-repeat bind="tracks">
-    Content
-</data-repeat>
+        document.body.appendChild(document.importNode(content, true));
+    </script>
 
-<script>
-    var dataRepeat = document.registerElement('data-repeat', {
-        prototype: Object.create(HTMLElement.prototype, {
-            createdCallback: {
-                value: function() {
-                    var t = document.querySelector('#data-repeat');
-                    var clone = document.importNode(t.content, true);
-                    this.createShadowRoot().appendChild(clone);
-                }
-            }
-        })
-    });
+    <data-model>
+        <h2>Id: {{ id }}</h2>
 
-    var observer = Object.observe({ }, function() {
+        <p>{{ firstName }} {{ lastName }}</p>
+        <p>{{ birthDate }}</p>
 
-    });
-
-    Object.getNotifier({ }).notify()
-
-    console.dir(document.querySelector('data-repeat'));
-</script>
+        <span>{{ test }}</span>
+    </data-model>
 
 </body>
 </html>
