@@ -17,7 +17,7 @@
 
     <h1>Hello</h1>
 
-    <script>
+    <script type="text/javascript">
         var link = document.querySelector('link[rel=import]');
         var content = link.import.querySelector('#data-model');
 
@@ -33,5 +33,15 @@
         <span>{{ test }}</span>
     </data-model>
 
+    <script type="text/javascript">
+        /*var blob = new Blob(["onmessage = function(e) { postMessage('msg from worker'); }"], { type: 'text/javascript' });
+        var worker  = new Worker(window.URL.createObjectURL(blob));
+
+        worker.addEventListener('message', function(e) {
+            console.log(e);
+        });
+
+        worker.postMessage();*/
+    </script>
 </body>
 </html>
