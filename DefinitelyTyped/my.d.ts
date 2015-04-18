@@ -30,6 +30,8 @@ interface Object {
     deliverChangeRecords(callback: Function): void
 
     unobserve(observer: Function, callback?: Function): void
+
+    setPrototypeOf(object: Object, prototype: Object): void
 }
 
 interface Array {
