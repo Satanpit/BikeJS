@@ -35,7 +35,7 @@ define(['utils'], function (utils) {
      * @constructor
      */
     function DOMElements(selector) {
-        let elements = [ ];
+        var elements = [ ];
 
         if (utils.isElement(selector)) {
             this.push(selector);
