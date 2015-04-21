@@ -10,10 +10,10 @@
                 method: 'POST',
                 baseUrl: ''
             }
-    }
+        }
     });
 
-    require(['ajax', 'class'], function (ajax) {
-
+    require(['ajax'], function (ajax) {
+        console.dir(ajax);
     });
 }());
