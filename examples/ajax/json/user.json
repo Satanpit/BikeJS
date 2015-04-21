@@ -1,0 +1,16 @@
+{
+  "id": 205387401,
+  "first_name": "Tom",
+  "last_name": "Cruise",
+  "sex": 2,
+  "city": {
+    "id": 5331,
+    "title": "Los Angeles"
+  },
+  "country": {
+    "id": 9,
+    "title": "—ÿ¿"
+  },
+  "photo_50": "http://cs402330.v...0/pV6sZ5wRGxE.jpg",
+  "verified": 1
+}

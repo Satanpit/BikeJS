@@ -1,0 +1,89 @@
+{
+  "api": {
+    "vk": {
+      "url": "https://api.vk.com/method/",
+      "ver": 5.25,
+      "method": "GET",
+      "async": true,
+      "requestLimit": 3
+    },
+    "lastFm": {
+      "url": "https://ws.audioscrobbler.com/2.0/",
+      "key": "4d1b3ad77378f123123e3483b3c1dsfdg",
+      "secret": "b3458sdfsdf31b7113f12838sdffgh6d6",
+      "format": "json",
+      "method": "POST",
+      "async": true
+    }
+  },
+  "oauth": {
+    "interactive": true,
+    "vk": {
+      "url": "https://oauth.vk.com/authorize",
+      "params": {
+        "client_id": 666,
+        "scope": "audio,status,offline",
+        "redirect_uri": "https://undefined.chromiumapp.org/cb",
+        "v": 5.25,
+        "display": "page",
+        "response_type": "token"
+      }
+    }
+  },
+  "analytics": {
+    "service": "cMusic Player",
+    "tracker": "UA-47794396-1"
+  },
+  "user": {},
+  "lang": {
+    "default": "ru",
+    "prefix": "lang/",
+    "suffix": ".json",
+    "support": [
+      "ru",
+      "en"
+    ]
+  },
+  "app": {
+    "version": 3,
+    "volume": 0.8,
+    "imageLocalCache": true,
+    "syncGoogleDrive": true,
+    "notifications": {
+      "enable": true,
+      "type": "basic"
+    },
+    "autocomplete": {
+      "enable": true,
+      "artists": 5,
+      "tracks": 5
+    },
+    "itemsInPage": {
+      "tracks": {
+        "default": 50,
+        "top": 10,
+        "user": 100
+      },
+      "artists": {
+        "lib": 36,
+        "similar": {
+          "top": 4,
+          "all": 36
+        }
+      },
+      "albums": {
+        "top": 3,
+        "all": 50
+      },
+      "events": {
+        "artist": 50,
+        "user": 30
+      }
+    },
+    "settings": {
+      "notification": true,
+      "scrobble": true,
+      "translate": true
+    }
+  }
+}

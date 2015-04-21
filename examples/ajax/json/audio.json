@@ -1,0 +1,374 @@
+{
+  "response": {
+    "count": 1874,
+    "items": [
+      {
+        "id": 362367901,
+        "owner_id": 12327425,
+        "artist": "Avril Lavigne",
+        "title": "Fly",
+        "duration": 186,
+        "url": "http://cs7-2v4.vk...8d_ZnkaJMH1ye7Bdb",
+        "genre_id": 9
+      },
+      {
+        "id": 360907344,
+        "owner_id": 12327425,
+        "artist": "All That Remains",
+        "title": "Fiat Empire",
+        "duration": 246,
+        "url": "http://cs611520.v...VamcYO8YR62L_T_BV",
+        "genre_id": 18
+      },
+      {
+        "id": 360478833,
+        "owner_id": 12327425,
+        "artist": "Meg Myers",
+        "title": "Sorry",
+        "duration": 237,
+        "url": "http://cs7-5v4.vk...oqjDLR5mzc3XZ4VG7",
+        "lyrics_id": 236345009,
+        "genre_id": 1
+      },
+      {
+        "id": 358870259,
+        "owner_id": 12327425,
+        "artist": "Breaking Benjamin",
+        "title": "Angels Fall",
+        "duration": 228,
+        "url": "http://cs7-4v4.vk...J4JCzDb8UpGjuNtPU",
+        "genre_id": 1
+      },
+      {
+        "id": 358660166,
+        "owner_id": 12327425,
+        "artist": "Breaking Benjamin",
+        "title": "Defeated",
+        "duration": 205,
+        "url": "http://cs7-5v4.vk...6uR1cNq6hslzvTVt7",
+        "genre_id": 1
+      },
+      {
+        "id": 358659855,
+        "owner_id": 12327425,
+        "artist": "Three Days Grace",
+        "title": "Every Other Weekend",
+        "duration": 257,
+        "url": "http://cs7-4v4.vk...He50zRfZEuTu1MXdE",
+        "genre_id": 1
+      },
+      {
+        "id": 358252342,
+        "owner_id": 12327425,
+        "artist": "Armin van Buuren",
+        "title": "Gareth Emery feat. Christina Novelli-Dynamite (MaRLo Remix)",
+        "duration": 242,
+        "url": "http://cs7-3v4.vk...yfJFaLHLWhXtPe2lw",
+        "genre_id": 9
+      },
+      {
+        "id": 358119331,
+        "owner_id": 12327425,
+        "artist": "Armin van Buuren",
+        "title": "Craig Connelly & Cate Kanell-Shipwreck",
+        "duration": 387,
+        "url": "http://cs7-2v4.vk...2gg-5lbPnx4fXKKgd",
+        "genre_id": 9
+      },
+      {
+        "id": 357016831,
+        "owner_id": 12327425,
+        "artist": "Three Days Grace",
+        "title": "Fallen Angel",
+        "duration": 186,
+        "url": "http://cs7-5v4.vk...Gypv606CwLivIHJnc",
+        "genre_id": 18
+      },
+      {
+        "id": 356171684,
+        "owner_id": 12327425,
+        "artist": "Breaking Benjamin",
+        "title": "Failure",
+        "duration": 215,
+        "url": "http://cs7-4v4.vk...JwwDCasDnGQYs0_VZ",
+        "genre_id": 1
+      },
+      {
+        "id": 354315147,
+        "owner_id": 12327425,
+        "artist": "Sacrament/t.h.e.Sacrament",
+        "title": "А если я это не я",
+        "duration": 282,
+        "url": "http://cs7-1v4.vk...w1zNfr3WN9Au9KB2q"
+      },
+      {
+        "id": 353275964,
+        "owner_id": 12327425,
+        "artist": "Zella Day",
+        "title": "Jerome",
+        "duration": 212,
+        "url": "http://cs611424.v...OAi6W7l9nKhq-2ftG",
+        "lyrics_id": 238046538,
+        "genre_id": 18,
+        "no_search": 1
+      },
+      {
+        "id": 353275957,
+        "owner_id": 12327425,
+        "artist": "Zella Day",
+        "title": "High",
+        "duration": 217,
+        "url": "http://cs7-2v4.vk...7HU8-F-k9ZDKKNqAc",
+        "lyrics_id": 238046525,
+        "genre_id": 18,
+        "no_search": 1
+      },
+      {
+        "id": 351229306,
+        "owner_id": 12327425,
+        "artist": "Ash & Skies",
+        "title": "My Only Home",
+        "duration": 195,
+        "url": "http://cs7-4v4.vk...nIzjF3WGZetVJYrHQ"
+      },
+      {
+        "id": 345347676,
+        "owner_id": 12327425,
+        "artist": "The Taking",
+        "title": "Torn to Pieces",
+        "duration": 246,
+        "url": "http://cs613921.v...fQqJukCiCIsGUvTUY",
+        "genre_id": 18
+      },
+      {
+        "id": 345345975,
+        "owner_id": 12327425,
+        "artist": "The Animal In Me",
+        "title": "The Heart Wants What It Wants (Selena Gomez Cover)",
+        "duration": 230,
+        "url": "http://cs611526.v...zV_dNxgiDmk9ybf2B"
+      },
+      {
+        "id": 342222364,
+        "owner_id": 12327425,
+        "artist": "Gareth Emery feat. Gavin Beach",
+        "title": "Eye Of The Storm (Craig Connelly Remix)",
+        "duration": 411,
+        "url": "http://cs611730.v...LDLmwqFIrBZNpurrr",
+        "genre_id": 11,
+        "no_search": 1
+      },
+      {
+        "id": 342156098,
+        "owner_id": 12327425,
+        "artist": "Lifehouse",
+        "title": "Flight",
+        "duration": 257,
+        "url": "http://cs7-4v4.vk...k09Nhfjun3PUCqQSt",
+        "genre_id": 2
+      },
+      {
+        "id": 341734453,
+        "owner_id": 12327425,
+        "artist": "Smash Into Pieces",
+        "title": "Checkmate",
+        "duration": 213,
+        "url": "http://cs7-4v4.vk...SG199cIAbt8a69C9O",
+        "genre_id": 21
+      },
+      {
+        "id": 340450735,
+        "owner_id": 12327425,
+        "artist": "Blind Guardian",
+        "title": "The Bard`s Song - In the Forest",
+        "duration": 208,
+        "url": "http://cs7-1v4.vk...9jchs_esg3bsjvF0r",
+        "lyrics_id": 144974600
+      },
+      {
+        "id": 340121284,
+        "owner_id": 12327425,
+        "artist": "Blind Guardian",
+        "title": "Prophecies",
+        "duration": 327,
+        "url": "http://cs422727.v...Ht8k-IEMYeEDwKIbH",
+        "genre_id": 18,
+        "no_search": 1
+      },
+      {
+        "id": 338893039,
+        "owner_id": 12327425,
+        "artist": "Malrun",
+        "title": "Breaking the Illusion",
+        "duration": 242,
+        "url": "http://cs611731.v...Bxr687rtUijQyykxP",
+        "genre_id": 18
+      },
+      {
+        "id": 338134221,
+        "owner_id": 12327425,
+        "artist": "Tomorrow Rain",
+        "title": "Звук тишины",
+        "duration": 159,
+        "url": "http://cs7-4v4.vk...HkLMb5lTcl40_Zzds"
+      },
+      {
+        "id": 338134217,
+        "owner_id": 12327425,
+        "artist": "Tomorrow Rain",
+        "title": "Весь мир",
+        "duration": 194,
+        "url": "http://cs422222.v...GOfENxuVmGKYJHSES"
+      },
+      {
+        "id": 335951113,
+        "owner_id": 12327425,
+        "artist": "Enjoykin",
+        "title": "Безысходность",
+        "duration": 102,
+        "url": "http://cs7-4v4.vk...G04UJ6swE4Mc1oN8Y",
+        "lyrics_id": 85341441,
+        "genre_id": 9
+      },
+      {
+        "id": 335937137,
+        "owner_id": 12327425,
+        "artist": "All That Remains",
+        "title": "This Probably Won`t End Well",
+        "duration": 228,
+        "url": "http://cs7-2v4.vk...WYKU2PBVDq9OMWqTx"
+      },
+      {
+        "id": 335157619,
+        "owner_id": 12327425,
+        "artist": "EarlyRise",
+        "title": "Old Friend",
+        "duration": 251,
+        "url": "http://cs7-1v4.vk...XzOFLFHJKW7xtTziR",
+        "lyrics_id": 22008206,
+        "genre_id": 1
+      },
+      {
+        "id": 335156933,
+        "owner_id": 12327425,
+        "artist": "Casting Crowns",
+        "title": "All You`ve Ever Wanted",
+        "duration": 240,
+        "url": "http://cs6195.vk....f5mSRgrk5PbcTXeiu",
+        "genre_id": 18
+      },
+      {
+        "id": 335156863,
+        "owner_id": 12327425,
+        "artist": "Casting Crowns",
+        "title": "Love You With The Truth",
+        "duration": 242,
+        "url": "http://cs6195.vk....V4vkJwm6EC1O4Gkmn",
+        "genre_id": 18
+      },
+      {
+        "id": 333052575,
+        "owner_id": 12327425,
+        "artist": "FACTOREAL",
+        "title": "Сильнее чем 1000 солнц",
+        "duration": 221,
+        "url": "http://cs422527.v...irkjWLozDintLOIne",
+        "lyrics_id": 219146023,
+        "genre_id": 21
+      },
+      {
+        "id": 333052278,
+        "owner_id": 12327425,
+        "artist": "Scorpions",
+        "title": "We Built This House",
+        "duration": 233,
+        "url": "http://cs7-4v4.vk...CmGDtnf8grUmZwMmG"
+      },
+      {
+        "id": 332401783,
+        "owner_id": 12327425,
+        "artist": "John Legend",
+        "title": "All of Me",
+        "duration": 269,
+        "url": "http://cs7-4v4.vk...vIgaq-kBBqWpJwJJJ",
+        "lyrics_id": 108388005,
+        "genre_id": 3
+      },
+      {
+        "id": 332388456,
+        "owner_id": 12327425,
+        "artist": "Sherlock Brothers",
+        "title": "Beautiful",
+        "duration": 143,
+        "url": "http://cs6188.vk....5YBGG_dLiNATOtLNy",
+        "genre_id": 9
+      },
+      {
+        "id": 331609705,
+        "owner_id": 12327425,
+        "artist": "Король и Шут",
+        "title": "Фокусник",
+        "duration": 213,
+        "url": "http://cs7-2v4.vk...MS0xpRYqigEtomdb4",
+        "lyrics_id": 201518788,
+        "genre_id": 1
+      },
+      {
+        "id": 331421867,
+        "owner_id": 12327425,
+        "artist": "Ivan Torrent",
+        "title": "Human Legacy",
+        "duration": 239,
+        "url": "http://cs7-2v4.vk...ZaIU4EKNUFylsJEI3",
+        "lyrics_id": 80743022,
+        "genre_id": 18
+      },
+      {
+        "id": 331372948,
+        "owner_id": 12327425,
+        "artist": "Ivan Torrent",
+        "title": "Remember Me (feat. Roger Berruezo)",
+        "duration": 224,
+        "url": "http://cs422421.v...blZ5rVKPo5hcsCceW"
+      },
+      {
+        "id": 331368106,
+        "owner_id": 12327425,
+        "artist": "Third Day",
+        "title": "Carry my Cross",
+        "duration": 316,
+        "url": "http://cs7-4v4.vk...HWgfFPXFQwUpYNcgs",
+        "lyrics_id": 10176905,
+        "genre_id": 18
+      },
+      {
+        "id": 330640293,
+        "owner_id": 12327425,
+        "artist": "Before the Fire",
+        "title": "Collapse",
+        "duration": 195,
+        "url": "http://cs536419.v...pp7TJ_ZdSj3uNkQ9k",
+        "genre_id": 21
+      },
+      {
+        "id": 330633307,
+        "owner_id": 12327425,
+        "artist": "Massface",
+        "title": "Время",
+        "duration": 316,
+        "url": "http://cs7-5v4.vk...RlvcJjVXwU4U3wScP",
+        "genre_id": 21
+      },
+      {
+        "id": 327007573,
+        "owner_id": 12327425,
+        "artist": "Livid",
+        "title": "Fading Away",
+        "duration": 223,
+        "url": "http://cs7-3v4.vk...yJrmwlVKqTZgtLs6l",
+        "lyrics_id": 21356749,
+        "genre_id": 18
+      }
+    ]
+  }
+}

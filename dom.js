@@ -362,28 +362,4 @@
             });
         }
     });
-
-    root.ajax = function( options ) {
-        return new Promise(function(resolve, reject) {
-            var request = new XMLHttpRequest();
-            request.open(options.method || 'POST', options.url, options.async || true);
-            request.responseType = options.type || '';
-            request.addEventListener('load', function(response) {
-                resolve(response.target.response, response);
-            }, false);
-            request.addEventListener('progress', options.progress || null, false);
-            request.addEventListener('error', reject);
-            request.addEventListener('abort', reject);
-            request.send(options.data || null)
-        });
-    };
-
-    root.post = function( url, data ) {
-        return root.ajax({ url: url, data: data });
-    };
-
-    root.get = function( url ) {
-        return root.ajax({ method: 'GET', url: url });
-    };
-
 }.call(window.app || (window.app = Object.create(null))));
