@@ -3,9 +3,9 @@ My JavaScript libraries
 
 ## require.js
 
-Usage:
+**Usage:**
 
-**HTML:**
+HTML:
 
 ```html
 <body>
@@ -13,7 +13,7 @@ Usage:
 </body>
 ```
 
-**JavaScript:**
+main.js
 
 ```javascript
 require.config({
@@ -29,8 +29,6 @@ require.config({
 });
     
 require(['utils', 'dom', 'ajax'], function(utils, dom, ajax) {
-    console.log('Utils module:', utils);
-    console.log('DOM module:', dom);
-    console.log('AJAX module:', ajax);
+    /** Code... **/
 });
 ```

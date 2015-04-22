@@ -8,7 +8,7 @@
 
     require(['class'], function (Class) {
 
-        var TestClass = new Class({
+        var TestClass = Class({
 
             initialize: function (attributes) {
 
@@ -19,8 +19,9 @@
             }
         });
 
+        console.dir(new TestClass);
         console.dir(Class);
 
-        console.dir(TestClass);
+        console.log(new Class instanceof Class);
     });
 }());
