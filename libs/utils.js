@@ -108,6 +108,11 @@ define(function () {
         },
 
         defineProperties: function (object, properties) {
+            if (!properties) {
+                properties = object;
+                object = { };
+            }
+
             return Object.defineProperties(object, this.setPropertyDescriptors(properties));
         },
 
@@ -127,6 +132,40 @@ define(function () {
 
         toArray: function (object) {
             return [].slice.call(object);
+        },
+
+        serialize: function (data) {
+            return Object.keys(data).map(function (keyName) {
+                return encodeURIComponent(keyName) + '=' + encodeURIComponent(data[keyName])
+            }).join('&');
+        },
+
+        assign: function(target, firstSource) {
+            if (Object.assign) {
+                return Object.assign.apply(null, arguments);
+            }
+
+            if (target === undefined || target === null) {
+                throw new TypeError('Cannot convert first argument to object');
+            }
+
+            var to = Object(target);
+            for (var i = 1; i < arguments.length; i++) {
+                var nextSource = arguments[i];
+                if (nextSource === undefined || nextSource === null) {
+                    continue;
+                }
+
+                var keysArray = Object.keys(Object(nextSource));
+                for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+                    var nextKey = keysArray[nextIndex];
+                    var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+                    if (desc !== undefined && desc.enumerable) {
+                        to[nextKey] = nextSource[nextKey];
+                    }
+                }
+            }
+            return to;
         }
     };
 });

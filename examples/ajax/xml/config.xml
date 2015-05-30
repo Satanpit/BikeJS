@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config>
+    <name>cMusic Player</name>
+    <version>3.0</version>
+
+    <lang>
+        <default id="ru" />
+        <item name="ru" />
+        <item name="en" />
+    </lang>
+</config>

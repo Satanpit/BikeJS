@@ -1,3 +1,0 @@
-define('config', {
-    lang: 'ru'
-});

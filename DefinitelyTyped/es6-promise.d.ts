@@ -7,6 +7,14 @@ interface Thenable<R> {
 	then<U>(onFulfilled?: (value: R) => U | Thenable<U>,  onRejected?: (error: any) => U | Thenable<U>): Thenable<U>;
 }
 
+interface Deferred<R> {
+	promise:Promise;
+
+	resolve<R>(value?: R | Thenable<R>): Promise<R>;
+
+	reject(error: any): Promise<any>;
+}
+
 declare class Promise<R> implements Thenable<R> {
 	/**
 	 * If you call resolve in the body of the callback passed to the constructor,
@@ -60,6 +68,8 @@ declare module Promise {
 	 * Make a Promise that fulfills when any item fulfills, and rejects if any item rejects.
 	 */
 	function race<R>(promises: (R | Thenable<R>)[]): Promise<R>;
+
+	function defer<R>(): Deferred<R>;
 }
 
 declare module 'es6-promise' {
