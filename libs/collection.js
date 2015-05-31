@@ -1,4 +1,4 @@
-define(['utils', 'model'], function (Utils, Model) {
+define(['utils', 'model', 'map'], function (Utils, Model, ObservableMap) {
     'use strict';
 
     class CollectionModel extends Model {
@@ -28,7 +28,7 @@ define(['utils', 'model'], function (Utils, Model) {
         model: CollectionModel
     };
 
-    class Collection extends Map {
+    class Collection extends ObservableMap {
 
         [Symbol.iterator]() {
             return this.values();
@@ -42,15 +42,23 @@ define(['utils', 'model'], function (Utils, Model) {
                 ordered: new Map
             });
 
-            for (let item of items) {
-                let i = items.indexOf(item);
+            return this.add(items);
+        }
 
+        add(items) {
+            if (!Utils.isArray(items)) {
+                return this;
+            }
+
+            items.forEach(function (item, index) {
                 item = new this.options.model(item);
                 Object.defineProperty(item, 'collection', { writable: true, editable: true, value: this });
 
                 this.set(item.id, item);
-                this.ordered.set(i, item.id);
-            }
+                this.ordered.set(index, item.id);
+            }.bind(this));
+
+            return this;
         }
 
         delete(key) {

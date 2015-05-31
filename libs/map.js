@@ -1,23 +1,21 @@
 define(['utils'], function (Utils) {
     'use strict';
 
-    const OBSERVE_TYPES = ['add', 'change', 'delete', 'clear'];
-    const cache = [ ];
+    const CACHE = [ ];
 
     class ObservableMap extends Map {
-
         constructor() {
             super();
         }
 
         on(name, callback) {
-            cache.push({
+            CACHE.push({
                 name: name,
                 handler: callback
             });
 
             if (name === 'all') {
-                name = OBSERVE_TYPES;
+                name = this.observeTypes;
             }  else {
                 name = name.replace(/\s/g, '').split(',');
             }
@@ -29,11 +27,11 @@ define(['utils'], function (Utils) {
         }
 
         off(name) {
-            cache.forEach(function (item, index) {
+            CACHE.forEach(function (item, index) {
                 if (item.name === name) {
                     Object.unobserve(this, item.handler);
                 }
-                cache.splice(index, 0);
+                CACHE.splice(index, 0);
             }.bind(this));
         }
 
@@ -57,21 +55,25 @@ define(['utils'], function (Utils) {
                 this.trigger('add', { name: key, value: value });
             }
 
-            return super.set.apply(this, arguments);
+            return super.set(key, value);
         }
 
         delete(key) {
-            this.trigger('delete', { name: key, old: this.get(key) });
-            return super.delete.apply(this, arguments);
+            this.trigger('delete', { name: key, value: this.get(key) });
+            return super.delete(key);
         }
 
         clear() {
             this.trigger('clear');
-            return super.clear.apply(this, arguments);
+            return super.clear();
         }
 
         get notifier() {
             return Object.getNotifier(this);
+        }
+
+        get observeTypes() {
+            return ['add', 'change', 'delete', 'clear'];
         }
     }
 

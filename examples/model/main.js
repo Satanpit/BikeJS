@@ -8,25 +8,33 @@
 
     require(['ajax', 'model', 'collection'], function (Ajax, Model, Collection) {
 
-        Ajax.async(function*() {
+        class TracksCollection extends Collection {
+
+            fetch() {
+                Ajax('../ajax/json/audio.json').json().then(function (data) {
+                    this.add(data.response.items);
+                    this.trigger('load');
+                }.bind(this));
+
+                return this;
+            }
+
+            get observeTypes() {
+                return super.observeTypes.concat(['load']);
+            }
+        }
+
+        let tracks = new TracksCollection().fetch();
+
+        tracks.on('load', function () {
+            console.dir(tracks);
+        });
+
+        Ajax('index.html').post({test: 1});
+
+        /*Ajax.async(function*() {
             let audio = yield Ajax('../ajax/json/audio.json').json(),
                 config = yield Ajax('../ajax/json/config.json').json();
-
-            let collection = new Collection(audio.response.items);
-            let Conf = new Model(config);
-
-            Conf.on('all', function (changes) {
-                console.dir(changes);
-            });
-
-            Conf.on('change', function (changes) {
-                console.log('change', changes);
-            });
-
-            Conf.set('test', 1);
-            Conf.set('test', 2);
-
-            console.dir(Conf);
-        });
+        });*/
     });
 }());

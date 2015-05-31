@@ -242,6 +242,26 @@ define(['utils', 'module'], function (Utils, module) {
         },
 
         /**
+         * Before send hooks
+         * @param callback
+         * @returns {Ajax}
+         */
+        before: function (callback) {
+            //TODO
+            return this;
+        },
+
+        /**
+         * After request promise
+         * @param callback
+         * @returns {Ajax}
+         */
+        after: function (callback) {
+            //TODO
+            return this;
+        },
+
+        /**
          * Set your request configurations
          * @param {Object} config
          * @returns {Ajax}
