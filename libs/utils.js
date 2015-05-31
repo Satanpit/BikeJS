@@ -99,7 +99,7 @@ define(function () {
         setPropertyDescriptors: function (properties, enumerable) {
             var descriptors = { };
 
-            Object.keys(properties).forEach(function(key) {
+            Object.getOwnPropertyNames(properties).forEach(function(key) {
                 descriptors[key] = Object.getOwnPropertyDescriptor(properties, key);
                 (!enumerable) && (descriptors[key].enumerable =  false);
             });

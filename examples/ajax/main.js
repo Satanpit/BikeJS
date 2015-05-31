@@ -8,7 +8,10 @@
         config: {
             ajax: {
                 method: 'POST',
-                baseUrl: ''
+                baseUrl: '',
+                cache: false,
+                timeout: 10 * 1000,
+                paramDefaults: null
             }
         }
     });

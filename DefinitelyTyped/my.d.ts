@@ -18,19 +18,19 @@ interface NotifierNotify {
     (): any;
 
     prototype: {
-        notify(): any;
-        performChange(): any;
+        notify(changes?: Object): any;
+        performChange(name, callback?: Function, scope?: any): any;
     }
 }
 
 interface Object {
-    observe(beingObserved: any, callback: (update: any, changes?: any) => any) : void;
+    observe(beingObserved: Object, callback: Function, type: Array) : any;
 
     getNotifier(beingObserved: any): NotifierNotify
 
     deliverChangeRecords(callback: Function): void
 
-    unobserve(observer: Function, callback?: Function): void
+    unobserve(observer: Object, callback?: Function): void
 
     setPrototypeOf(object: Object, prototype: Object): void
 }

@@ -1,3 +1,11 @@
+/**
+ * Module for create ajax request
+ *
+ * @ver 0.1.0
+ * @author Alex Hyrenko
+ * @email alex.hyrenko@gmail.com
+ */
+
 define(['utils', 'module'], function (Utils, module) {
     'use strict';
 
@@ -61,10 +69,10 @@ define(['utils', 'module'], function (Utils, module) {
                 this.send();
                 return deferred.promise.then.apply(deferred.promise, arguments);
             },
-            chain: deferred.promise.chain.bind(deferred.promise),
-            catch: deferred.promise.catch.bind(deferred.promise),
-            resolve: deferred.resolve,
-            reject: deferred.reject
+            'chain' :   deferred.promise.chain.bind(deferred.promise),
+            'catch' :   deferred.promise.catch.bind(deferred.promise),
+            'resolve':  deferred.resolve,
+            'reject':   deferred.reject
         });
 
         this.url = url;
@@ -80,7 +88,7 @@ define(['utils', 'module'], function (Utils, module) {
         config: {
             method: 'GET',
             baseUrl: '',
-            timeout: 10*1000,
+            timeout: 10 * 1000,
             cache: false
         },
 
