@@ -1,3 +1,13 @@
 <component name="ProjectDictionaryState">
-  <dictionary name="Xss" />
+  <dictionary name="Xss">
+    <words>
+      <w>afterbegin</w>
+      <w>afterend</w>
+      <w>beforebegin</w>
+      <w>beforeend</w>
+      <w>cors</w>
+      <w>mousewheel</w>
+      <w>pagechange</w>
+    </words>
+  </dictionary>
 </component>
