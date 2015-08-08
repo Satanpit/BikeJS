@@ -89,7 +89,8 @@ define(['utils', 'module'], function (Utils, module) {
             method: 'GET',
             baseUrl: '',
             timeout: 10 * 1000,
-            cache: false
+            cache: false,
+            mode: 'cors'
         },
 
         headers: {
@@ -227,13 +228,11 @@ define(['utils', 'module'], function (Utils, module) {
 
             if (this.body) {
                 if (method !== 'get') {
-                    this.request.bodyUsed = true;
                     this.request.body = this.body;
                 }
             }
 
             timeout(this, this.config.timeout).then(this.reject.bind(null, new Error( TIMEOUT_ERROR + `${this.url}` )));
-
             this.response = fetch(this.url, this.request).then(function (response) {
                 status(response.status).then(this.resolve.bind(null, response), this.reject.bind(null, response));
             }.bind(this), this.reject);

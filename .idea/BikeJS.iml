@@ -9,5 +9,6 @@
     <orderEntry type="library" name="chrome-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="es6-promises-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="es6-promise-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="dt" level="project" />
   </component>
 </module>

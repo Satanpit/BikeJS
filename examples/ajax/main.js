@@ -3,24 +3,15 @@
 
     require.config({
         baseUrl: '../../libs',
-        removeScriptTags: true,
-
-        config: {
-            ajax: {
-                method: 'POST',
-                baseUrl: '',
-                cache: false,
-                timeout: 10 * 1000,
-                paramDefaults: null
-            }
-        }
+        removeScriptTags: true
     });
 
     require(['ajax', 'utils'], function (Ajax) {
-        let config = Ajax('json/config.json').json();
-        let index = Ajax('index.html').params({time: new Date().getTime()}).html();
 
-        config.then(console.dir.bind(console)).then(null, console.warn.bind(console));
-        index.then(console.dir.bind(console)).then(null, console.warn.bind(console));
+        Ajax.async(function*() {
+            let config = yield Ajax('json/config.json').json();
+
+            console.log(config);
+        });
     });
 }());

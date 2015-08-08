@@ -10,7 +10,7 @@ define(['utils'], function (utils) {
     "use strict";
 
     function extend(properties) {
-        return utils.setObjectPrototype(DOMElements.prototype, properties);
+        return utils.defineProperties(DOMElements.prototype, properties);
     }
 
     function ready(callback) {
@@ -150,7 +150,11 @@ define(['utils'], function (utils) {
 
         append: function( html ) {
             return this.each(function() {
-                this.insertAdjacentHTML('beforeend', html);
+                if (utils.isString(html)) {
+                    this.insertAdjacentHTML('beforeend', html);
+                } else {
+                    this.appendChild(html);
+                }
             });
         },
 
