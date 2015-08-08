@@ -6,6 +6,10 @@
       <w>beforebegin</w>
       <w>beforeend</w>
       <w>cors</w>
+<<<<<<< HEAD
+=======
+      <w>mousewheel</w>
+>>>>>>> e44daa823c4240196353e7714436a9550cc336e3
       <w>pagechange</w>
     </words>
   </dictionary>

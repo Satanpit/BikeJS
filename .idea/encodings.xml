@@ -4,7 +4,10 @@
     <file url="file://$PROJECT_DIR$/examples/api/itemTemplate.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/examples/api/simple.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/examples/api/simple2.js" charset="UTF-8" />
+<<<<<<< HEAD
     <file url="file://$PROJECT_DIR$/examples/api/simple3.js" charset="UTF-8" />
+=======
+>>>>>>> e44daa823c4240196353e7714436a9550cc336e3
     <file url="file://$PROJECT_DIR$/libs/ajax.js" charset="UTF-8" />
   </component>
 </project>
