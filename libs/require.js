@@ -1,7 +1,7 @@
 /**
  * AMD loader
  *
- * @ver 1.1.0
+ * @ver 1.1.1
  * @author Alex Hyrenko
  * @email alex.hyrenko@gmail.com
  */
@@ -20,6 +20,9 @@
 
     const delay = { };
 
+    /**
+     * DOM ready promise
+     */
     const ready = (function () {
         let deferred = Promise.defer();
 
@@ -32,6 +35,74 @@
 
         return deferred.promise;
     }());
+
+    /**
+     * Utilities to work with path string
+     */
+    const Path = {
+
+        optimize: function (path) {
+            if (!path) {
+                return path;
+            }
+
+            this.link.href = path;
+            return this.link.pathname.replace(/\/*([^\/]+)\/*/g, '/$1');
+        },
+
+        toURL: function (name, ext) {
+            let regExp = /^([http|https]?\/\/)(.*)(\.js)$/,
+                path = this.get(name),
+                prefix, file;
+
+            if (regExp.test(path)) {
+                return path;
+            }
+
+            prefix = require.options.prefix !== '' ? ('?' + require.options.prefix) : '';
+            file = (~path.indexOf('.js') ? '' : name + (ext && '.js') + prefix);
+
+            if (name === 'test') {
+                console.log(this.join(path, file))
+            }
+
+            return this.join(path, file);
+        },
+
+        join: function () {
+            let args = Array.prototype.splice.call(arguments, 0);
+
+            return this.optimize(args.reduce(function (prev, current) {
+                if (!current) {
+                    return prev;
+                }
+
+                return prev + (prev && '/') + current;
+            }));
+        },
+
+        get: function (name) {
+            return this.join(require.options.baseUrl, require.options.paths[name]);
+        },
+
+        ext: function (src) {
+            return src.split('.').pop();
+        },
+
+        get current() {
+            return doc.currentScript.src;
+        },
+
+        get toName() {
+            let src = this.current.replace(/\.[a-zA-Z]+$/, ''),
+                name = src.split('/').pop(),
+                path = this.get(name);
+
+            return this.optimize(src).substr(path.length + 1);
+        },
+
+        link: doc.createElement('a')
+    };
 
     const registry = {
         modules: { },
@@ -96,8 +167,8 @@
             },
 
             load: function (name) {
-                let src = this.url(name, true),
-                    ext = src.split('.').pop(),
+                let src = Path.toURL(name, true),
+                    ext = Path.ext(src),
                     loader = this.loaders[ext] || this.loaders.default;
 
                 return ready.then(function () {
@@ -114,38 +185,6 @@
 
                 this.loaders[ext] = loader;
                 return this;
-            },
-
-            path(name) {
-                let path = require.options.paths[name] || '';
-                path = (require.options.baseUrl + path).replace(/(\/*)(.+[^\/])(\/*)/g, '$2');
-
-                return path;
-            },
-
-            url(name, ext) {
-                let regExp = /^([http|https]?\/\/)(.*)(\.js)$/,
-                    path = this.path(name),
-                    prefix, file;
-
-                if (regExp.test(path)) {
-                    return path;
-                }
-
-                prefix = require.options.prefix !== '' ? ('?' + require.options.prefix) : '';
-                file = (~path.indexOf('.js') ? '' : name + (ext && '.js') + prefix);
-
-                return path + (path ? '/' : '') + file;
-            },
-
-            get name() {
-                let src = doc.currentScript.src.replace('.js', ''),
-                    name = src.split('/').pop(),
-                    path = this.path(name);
-
-                return name;
-                // TODO: URL parser
-                //return src.slice(src.indexOf(path) + 1).substr(path.length);
             }
         }
 
@@ -189,13 +228,13 @@
 
             if (typeof name !== 'string') {
                 definition = Array.isArray(name) && (dependencies = name) ? definition : name;
-                name = loader.name;
+                name = Path.toName;
             }
         } else {
             if (typeof name === 'function') {
                 definition = name;
                 dependencies = ['module'];
-                name = loader.name;
+                name = Path.toName;
             }
         }
 
